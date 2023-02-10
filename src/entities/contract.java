@@ -11,7 +11,7 @@ public class contract {
 
 	private List<Installment> installments = new ArrayList<>();
 
-	public Contract() {
+	public contract() {
 
 	}
 
