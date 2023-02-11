@@ -22,7 +22,7 @@ public class program {
 		System.out.print("Valor do contrato: ");
 		double totalValue = leitor.nextDouble();
 		
-		contract obj = new contract(number, date, totalValue);
+		Contract obj = new Contract(number, date, totalValue);
 		
 		
 		leitor.close();

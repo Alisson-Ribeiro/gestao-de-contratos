@@ -2,16 +2,16 @@ package entities;
 
 import java.time.LocalDate;
 
-public class installment {
+public class Installment {
 
 	private LocalDate date;
 	private Double amount;
 
-	public installment() {
+	public Installment() {
 		
 	}
 	
-	public installment(LocalDate date, Double amount) {
+	public Installment(LocalDate date, Double amount) {
 		this.date = date;
 		this.amount = amount;
 	}
