@@ -15,11 +15,11 @@ public class program {
 		DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		
 		System.out.println("Entre os dados do contrato: ");
-		System.out.println("Numero: ");
+		System.out.print("Numero: ");
 		int number = leitor.nextInt();
 		System.out.println("Data (dd/MM/yyyy): ");
 		LocalDate date = LocalDate.parse(leitor.next(), fmt);
-		System.out.println("Valor do contrato: ");
+		System.out.print("Valor do contrato: ");
 		double totalValue = leitor.nextDouble();
 		
 		contract obj = new contract(number, date, totalValue);
