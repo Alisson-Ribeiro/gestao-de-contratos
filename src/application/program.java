@@ -5,6 +5,11 @@ import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 import java.util.Scanner;
 
+import entities.Contract;
+import entities.Installment;
+import services.ContractService;
+import services.PaypalService;
+
 public class program {
 
 	public static void main(String[] args) {
@@ -23,6 +28,21 @@ public class program {
 		double totalValue = leitor.nextDouble();
 		
 		Contract obj = new Contract(number, date, totalValue);
+		
+		System.out.println("Entre com o numero de parcelas: ");
+		int n = leitor.nextInt();
+		
+		ContractService contractService = new ContractService(new PaypalService());
+		
+		contractService.processContract(obj, n);
+		
+		System.out.println("Parcelas: ");
+		
+		for (Installment installment : obj.getInstallments()) {
+			System.out.println(installment);
+		}
+		
+		
 		
 		
 		leitor.close();
